@@ -54,7 +54,8 @@ static bool GLOBAL_SYSTEM_LITTLE_ENDIAN =
 
 #ifdef IMF_HAVE_SSE2
 
-#ifdef __GNUC__
+//add test __MINGW32__ for mingw32-w64
+#ifdef defined(__GNUC__) && !defined(__MINGW32__)
 // Causes issues on certain gcc versions
 //#define EXR_FORCEINLINE inline __attribute__((always_inline))
 #define EXR_FORCEINLINE inline

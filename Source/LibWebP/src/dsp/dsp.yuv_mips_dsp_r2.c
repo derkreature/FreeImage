@@ -54,9 +54,9 @@
   "srl              %[temp5],   %[temp5],       24              \n\t"          \
   "srl              %[temp6],   %[temp6],       24              \n\t"          \
   "srl              %[temp7],   %[temp7],       24              \n\t"          \
-  "sb               %[temp5],   "#R"(%[dst])                    \n\t"          \
-  "sb               %[temp6],   "#G"(%[dst])                    \n\t"          \
-  "sb               %[temp7],   "#B"(%[dst])                    \n\t"          \
+  "sb               %[temp5],   " #R "(%[dst])                    \n\t"          \
+  "sb               %[temp6],   " #G "(%[dst])                    \n\t"          \
+  "sb               %[temp7],   " #B "(%[dst])                    \n\t"          \
 
 #define ASM_CLOBBER_LIST()                                                     \
   : [temp0]"=&r"(temp0), [temp1]"=&r"(temp1), [temp2]"=&r"(temp2),             \
